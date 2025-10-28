@@ -2,20 +2,30 @@ application:
   name: DevOpsSimulator
   version: 1.0.0
   environment: production
-  
+
 server:
   host: 0.0.0.0
   port: 8080
   ssl_enabled: true
-  
+
 logging:
   level: INFO
   format: json
-  
-# Development configuration (enabled via environment variable)
+
 development:
   enabled: false
   port: 3000
   hot_reload: false
   debug_mode: false
   mock_apis: false
+
+# Experimental Configuration
+experimental:
+  version: 3.0.0-experimental
+  environment: testing
+  experimental_mode: true
+  server_ports: [9000, 9001, 9002]
+  ai_features:
+    predictive_scaling: true
+    anomaly_detection: true
+    auto_optimization: true
